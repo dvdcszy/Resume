@@ -1,0 +1,7 @@
+.rectangle {
+    background-color: #1B1B33;
+    /* background-color: red; */
+    height: 95vh;
+    width: 98vw;
+    border-radius: 20px;
+}
