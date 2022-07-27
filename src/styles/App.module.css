@@ -1,3 +1,4 @@
-.mainContent {
-    background-color: yellow;
+@font-face {
+  font-family: 'Kanit';
+  src: local('Kanit'), url(./fonts/Kanit-Regular.ttf) format('truetype');
 }
