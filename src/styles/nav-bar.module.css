@@ -15,16 +15,24 @@
   padding-top: 36px;
 }
 
-.navBox div span {
+.navBox div a {
   font-family: Kanit;
   font-size: 23px;
   letter-spacing: 0.92px;
   color: #ffffff;
   margin-right: 100px;
+  text-decoration: none;
 }
 
 span i {
   font-size: 114px;
   margin-left: 120px;
+  color: #e7ff7f;
+}
+
+.navBox div a:hover,
+.navBox div a:active,
+.navBox div a.active {
+  text-decoration: none;
   color: #e7ff7f;
 }

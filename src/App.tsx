@@ -1,13 +1,22 @@
 import React from 'react';
-import bgStyles from './styles/background-overlay.module.css';
-import HomeContent from './components/Home';
-import NavigationBar from './components/NavBar';
+import bgStyles from './Styles/background-overlay.module.css';
+import HomeComponent from './Components/Home';
+import AboutComponent from './Components/About';
+import SkillsAndTechsComponent from './Components/SkillsAndTechs';
+import ContactMeComponent from './Components/ContactMe';
+import NavigationBar from './Components/NavBar';
+import { Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
     <main className={bgStyles.backgroundOverlay}>
       <NavigationBar />
-      <HomeContent />
+      <Routes>
+        <Route path='/' element={<HomeComponent />} />
+        <Route path='/about' element={<AboutComponent />} />
+        <Route path='/skillsandtechs' element={<SkillsAndTechsComponent />} />
+        <Route path='/contactme' element={<ContactMeComponent />} />
+      </Routes>
     </main>
   );
 }

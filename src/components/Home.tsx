@@ -1,10 +1,10 @@
 import React from 'react';
-import styles from '../styles/home.module.css';
-import '../styles/icofont.min.css';
-import '../styles/brands.min.css';
+import styles from '../Styles/home.module.css';
+import '../Styles/icofont.min.css';
+import '../Styles/brands.min.css';
 import circuit from '../circuit.svg';
 
-const HomeContent = () => {
+const HomeComponent = () => {
   return (
     <>
       <section className={styles.mainContent}>
@@ -32,4 +32,4 @@ const HomeContent = () => {
   );
 };
 
-export default HomeContent;
+export default HomeComponent;
