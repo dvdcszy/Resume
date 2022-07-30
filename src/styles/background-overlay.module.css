@@ -1,9 +1,0 @@
-.backgroundOverlay {
-  background-color: #1b1b33;
-  display: flex;
-  flex-flow: column;
-  /* background-color: red; */
-  height: 95vh;
-  width: 98vw;
-  border-radius: 20px;
-}

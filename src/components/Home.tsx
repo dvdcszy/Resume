@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../Styles/home.module.css';
+import styles from '../Styles/Home.module.css';
 import '../Styles/icofont.min.css';
 import '../Styles/brands.min.css';
 import circuit from '../circuit.svg';

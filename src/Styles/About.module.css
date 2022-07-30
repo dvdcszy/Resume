@@ -1,0 +1,68 @@
+@font-face {
+  font-family: 'Kanit-SemiBold';
+  src: local('Kanit-SemiBold'),
+    url(../Fonts/Kanit-SemiBold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Kanit-Regular';
+  src: local('Kanit-Regular'),
+    url(../Fonts/Kanit-Regular.ttf) format('truetype');
+}
+
+.mainContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+}
+
+.intro {
+  width: 50%;
+}
+
+.mainContainer h2 {
+  align-self: flex-start;
+  flex-direction: row;
+  font-family: Kanit-Regular;
+  font-size: 25px;
+  line-height: 30px;
+  letter-spacing: 1.25px;
+  text-decoration: underline;
+}
+
+.summaryText {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.summaryText {
+  font-family: Kanit-SemiBold;
+  font-size: 20px;
+  line-height: 55px;
+  letter-spacing: 1px;
+  align-self: center;
+}
+
+.dot {
+  height: 115px;
+  width: 115px;
+  border-radius: 50%;
+  margin-right: 25px;
+  display: block;
+}
+
+.experiences {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.experiences > div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

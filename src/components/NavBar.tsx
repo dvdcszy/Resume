@@ -1,7 +1,7 @@
 import React from 'react';
-import styles from '../Styles/nav-bar.module.css';
+import styles from '../Styles/NavBar.module.css';
 import '../Styles/icofont.min.css';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const NavigationBar = () => {
   const activeStyle = {
@@ -10,7 +10,7 @@ const NavigationBar = () => {
   };
 
   return (
-    <div className={styles.navBox}>
+    <nav className={styles.navBox}>
       <div id={styles.first}>
         <NavLink to='/'>
           <span>
@@ -41,7 +41,7 @@ const NavigationBar = () => {
           <span>Contact</span>
         </NavLink>
       </div>
-    </div>
+    </nav>
   );
 };
 
