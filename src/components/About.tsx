@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from '../Styles/About.module.css';
 import portrait from '../Images/IMG_0078.jpg';
-import dateMap from '../Images/circuit_w_dates.svg';
+import careerPathImg from '../Images/careerpath_v7.png';
 
 const AboutComponent = () => {
   return (
@@ -21,7 +21,7 @@ const AboutComponent = () => {
           <h2>EDUCATION</h2>
           <h2>EXPERIENCE</h2>
         </div>
-        <img src={dateMap} alt='Image of periods in my career' />
+        <img src={careerPathImg} alt='Image of periods in my career' />
       </div>
     </div>
   );

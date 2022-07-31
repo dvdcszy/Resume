@@ -1,15 +1,3 @@
-@font-face {
-  font-family: 'Kanit-SemiBold';
-  src: local('Kanit-SemiBold'),
-    url(../Fonts/Kanit-SemiBold.ttf) format('truetype');
-}
-
-@font-face {
-  font-family: 'Kanit-Regular';
-  src: local('Kanit-Regular'),
-    url(../Fonts/Kanit-Regular.ttf) format('truetype');
-}
-
 .mainContainer {
   display: flex;
   align-items: center;
@@ -55,9 +43,10 @@
 }
 
 .experiences {
-  width: 50%;
+  width: 70%;
   display: flex;
   flex-direction: column;
+  margin-bottom: 2rem;
 }
 
 .experiences > div {
@@ -65,4 +54,5 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 2rem;
 }
