@@ -11,7 +11,6 @@
 
 .mainContainer h2 {
   align-self: flex-start;
-  flex-direction: row;
   font-family: Kanit-Regular;
   font-size: 25px;
   line-height: 30px;
@@ -43,8 +42,8 @@
 }
 
 .experiences {
-  width: 70%;
   display: flex;
+  max-width: 50%;
   flex-direction: column;
   margin-bottom: 2rem;
 }
@@ -55,4 +54,8 @@
   align-items: center;
   justify-content: space-between;
   margin-bottom: 2rem;
+}
+
+img {
+  max-width: 100%;
 }

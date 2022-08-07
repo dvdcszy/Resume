@@ -13,14 +13,14 @@ function App() {
       <header>
         <NavigationBar />
       </header>
-      <section className={bgStyles.content}>
+      <div className={bgStyles.content}>
         <Routes>
           <Route path='/' element={<HomeComponent />} />
           <Route path='/about' element={<AboutComponent />} />
           <Route path='/skillsandtechs' element={<SkillsAndTechsComponent />} />
           <Route path='/contactme' element={<ContactMeComponent />} />
         </Routes>
-      </section>
+      </div>
     </div>
   );
 }

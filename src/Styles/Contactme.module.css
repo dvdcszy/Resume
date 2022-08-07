@@ -1,0 +1,89 @@
+.mainContainer {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+::placeholder {
+  font-family: Kanit-Light;
+  letter-spacing: 1.25px;
+  text-align: center;
+}
+
+input[name='Sender'] {
+  background: #fff;
+  border-style: Solid;
+  border-color: #e7ff7f;
+  border-width: 4px;
+  border-radius: 9px;
+  min-width: 600px;
+  min-height: 41px;
+  margin-bottom: 2em;
+}
+
+textarea[name='Message'] {
+  background: #fff;
+  border-style: Solid;
+  border-color: #e7ff7f;
+  border-width: 4px;
+  border-radius: 9px;
+  min-width: 600px;
+  min-height: 185px;
+  outline: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  resize: none;
+}
+
+div.contactCard {
+  width: 350px;
+  flex: 1;
+  border-style: Solid;
+  border-color: #e7ff7f;
+  border-width: 4px;
+  border-radius: 9px;
+  margin-left: 165px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  font-family: Kanit-Light;
+  font-size: 15px;
+  letter-spacing: 0.75px;
+  color: #e7ff7f;
+  padding-left: 2em;
+}
+
+.contactCard > h2 {
+  font-size: 15px;
+  letter-spacing: 0.75px;
+  color: #e7ff7f;
+  margin-bottom: 1.5em;
+}
+
+.contactCard > h2 > a,
+.contactCard > h2 > a:hover,
+.contactCard > h2 > a:focus,
+.contactCard > h2 > a:active {
+  text-decoration: none;
+  font-family: Kanit-Light;
+  font-size: 15px;
+  line-height: 1px;
+  letter-spacing: 0.75px;
+  color: #e7ff7f;
+}
+
+.contactCard > h2 > i,
+.contactCard > h2 > a > i {
+  font-size: 30px;
+  line-height: 0.1px;
+  margin-right: 0.5em;
+}

@@ -4,12 +4,12 @@
   background-color: #1b1b33;
   width: 98vw;
   min-height: 98vh;
-  /*   margin-top: 25px;
-  margin-bottom: 25px; */
   border-radius: 20px;
-  align-self: center;
 }
 
-section.content {
+div.content {
   flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

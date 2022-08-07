@@ -1,0 +1,46 @@
+.mainContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  color: #fff;
+}
+
+.mainContainer > h2 {
+  flex: 1;
+  width: 70%;
+  font-family: Kanit-Regular;
+  font-size: 25px;
+  line-height: 30px;
+  letter-spacing: 1.25px;
+  text-decoration: underline;
+  margin-top: 3em;
+  margin-bottom: 1em;
+}
+
+.mainContainer > div {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  margin-top: 3em;
+  margin-bottom: 1em;
+}
+
+.mainContainer > div > h2 {
+  font-family: Kanit-Regular;
+  font-size: 25px;
+  line-height: 30px;
+  letter-spacing: 1.25px;
+  text-decoration: underline;
+}
+
+.mainContainer > div > h4 {
+  font-family: Kanit-Light;
+  font-size: 15px;
+  line-height: 30px;
+  letter-spacing: 1.25px;
+}
+
+.mainContainer > img {
+  max-width: 70%;
+}
