@@ -4,6 +4,7 @@
   flex-direction: column;
   flex-wrap: wrap;
   color: #fff;
+  max-width: 70%;
 }
 
 .mainContainer > h2 {

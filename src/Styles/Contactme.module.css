@@ -17,7 +17,7 @@ form {
   text-align: center;
 }
 
-input[name='Sender'] {
+input[name='from_name'] {
   background: #fff;
   border-style: Solid;
   border-color: #e7ff7f;
@@ -28,7 +28,7 @@ input[name='Sender'] {
   margin-bottom: 2em;
 }
 
-textarea[name='Message'] {
+textarea[name='message'] {
   background: #fff;
   border-style: Solid;
   border-color: #e7ff7f;
@@ -62,17 +62,30 @@ div.contactCard {
   padding-left: 2em;
 }
 
-.contactCard > h2 {
+.row {
   font-size: 15px;
   letter-spacing: 0.75px;
   color: #e7ff7f;
   margin-bottom: 1.5em;
+  display: flex;
 }
 
-.contactCard > h2 > a,
-.contactCard > h2 > a:hover,
-.contactCard > h2 > a:focus,
-.contactCard > h2 > a:active {
+.icon > a,
+.icon > a:hover,
+.icon > a:focus,
+.icon > a:active {
+  text-decoration: none;
+  font-family: Kanit-Light;
+  font-size: 30px;
+  line-height: 1px;
+  letter-spacing: 0.75px;
+  color: #e7ff7f;
+}
+
+.text > a,
+.text > a:hover,
+.text > a:focus,
+.text > a:active {
   text-decoration: none;
   font-family: Kanit-Light;
   font-size: 15px;
@@ -81,9 +94,11 @@ div.contactCard {
   color: #e7ff7f;
 }
 
-.contactCard > h2 > i,
-.contactCard > h2 > a > i {
+.icon {
   font-size: 30px;
-  line-height: 0.1px;
-  margin-right: 0.5em;
+}
+
+.text {
+  align-self: center;
+  margin-left: 2em;
 }
