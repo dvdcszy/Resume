@@ -17,8 +17,7 @@
 }
 
 .imageContainer {
-  background-size: contain;
-  max-width: 190px;
+  min-width: 190px;
 }
 
 .imageContainer img {

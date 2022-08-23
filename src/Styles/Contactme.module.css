@@ -26,6 +26,11 @@ input[name='from_name'] {
   min-width: 600px;
   min-height: 41px;
   margin-bottom: 2em;
+  outline: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  resize: none;
 }
 
 textarea[name='message'] {

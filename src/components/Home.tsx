@@ -3,13 +3,14 @@ import styles from '../Styles/Home.module.css';
 import '../Styles/icofont.min.css';
 import '../Styles/brands.min.css';
 import circuit from '../circuit.svg';
+import HomeCircuitSvgComponent from './HomeCircuitSvg';
 
 const HomeComponent = () => {
   return (
     <>
       <section className={styles.mainContent}>
         <div className={styles.imageContainer}>
-          <img src={circuit} alt='Circuit' />
+          <HomeCircuitSvgComponent />
         </div>
         <div className={styles.textContainer}>
           <h3 className={styles.welcome}>HELLO, I&apos;M</h3>

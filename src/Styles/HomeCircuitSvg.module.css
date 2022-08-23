@@ -1,0 +1,12 @@
+.cls1 {
+  fill: none;
+}
+.cls1,
+.cls2 {
+  stroke: #e7ff7f;
+  stroke-miterlimit: 10;
+  stroke-width: 4px;
+}
+.cls2 {
+  fill: #e7ff7f;
+}

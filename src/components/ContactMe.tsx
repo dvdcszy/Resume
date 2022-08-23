@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from '../Styles/Contactme.module.css';
 import '../Styles/icofont.min.css';
 import '../Styles/brands.min.css';
 import emailjs from '@emailjs/browser';
 
 const ContactMeComponent = () => {
+  interface SubmittedForm {
+    isMessageSent: boolean;
+  }
+  const [submittedForm, setIsMessageSent] = useState<SubmittedForm>({
+    isMessageSent: false,
+  });
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     emailjs
@@ -15,21 +21,27 @@ const ContactMeComponent = () => {
         'uDytv20x8CsKfGK0k',
       )
       .then(
-        (result: { text: any }) => {
+        (result: { text: string }) => {
           console.log(result.text);
         },
-        (error: { text: any }) => {
+        (error: { text: string }) => {
           console.log(error.text);
         },
       );
+    e.currentTarget.reset();
+    setIsMessageSent({ isMessageSent: true });
   };
   return (
     <div className={styles.mainContainer}>
-      <form onSubmit={sendEmail}>
-        <input type='text' name='from_name' />
-        <textarea name='message' />
-        <input type='submit' value='Send' />
-      </form>
+      {submittedForm.isMessageSent ? (
+        <h4>Thank you!</h4>
+      ) : (
+        <form onSubmit={sendEmail}>
+          <input type='text' name='from_name' />
+          <textarea name='message' />
+          <input type='submit' value='Send' />
+        </form>
+      )}
       <div className={styles.contactCard}>
         <div className={styles.row}>
           <div className={styles.icon}>
