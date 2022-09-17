@@ -9,9 +9,9 @@ const HomeComponent = () => {
   return (
     <>
       <section className={styles.mainContent}>
-        <div className={styles.imageContainer}>
+        {/*         <div className={styles.imageContainer}>
           <HomeCircuitSvgComponent />
-        </div>
+        </div> */}
         <div className={styles.textContainer}>
           <h3 className={styles.welcome}>HELLO, I&apos;M</h3>
           <h2 className={styles.name}>DAVID CSIZY</h2>

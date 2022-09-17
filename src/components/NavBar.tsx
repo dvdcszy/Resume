@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from '../Styles/NavBar.module.css';
 import '../Styles/icofont.min.css';
+import initialsLogo from '../Images/initials.png';
 import { NavLink } from 'react-router-dom';
 
 const NavigationBar = () => {
@@ -13,9 +14,7 @@ const NavigationBar = () => {
     <nav className={styles.navBox}>
       <div id={styles.first}>
         <NavLink to='/'>
-          <span>
-            <i className='icofont-circuit'></i>
-          </span>
+          <img id={styles.logo} src={initialsLogo} alt='My logo' />
         </NavLink>
       </div>
       <div id={styles.second}>

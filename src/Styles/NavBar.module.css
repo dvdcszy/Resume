@@ -39,3 +39,9 @@ nav div a.active {
   text-decoration: none;
   color: #e7ff7f;
 }
+
+nav #logo {
+  max-width: 11%;
+  margin-left: 2em;
+  margin-top: 1em;
+}
