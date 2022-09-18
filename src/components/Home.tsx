@@ -2,8 +2,8 @@ import React from 'react';
 import styles from '../Styles/Home.module.css';
 import '../Styles/icofont.min.css';
 import '../Styles/brands.min.css';
-import circuit from '../circuit.svg';
-import HomeCircuitSvgComponent from './HomeCircuitSvg';
+/* import circuit from '../circuit.svg';
+import HomeCircuitSvgComponent from './HomeCircuitSvg'; */
 
 const HomeComponent = () => {
   return (
@@ -22,9 +22,24 @@ const HomeComponent = () => {
           </h4>
           <section className={styles.social}>
             <span>
-              <a href='#' className='icofont-linkedin'></a>
-              <a href='#' className='icofont-facebook-messenger'></a>
-              <a href='#' className='fa-brands fa-github'></a>
+              <a
+                href='https://www.linkedin.com/in/david-csizy-7ab5a063/'
+                target='_blank'
+                rel='noreferrer'
+                className='icofont-linkedin'
+              ></a>
+              <a
+                href='http://m.me/david.csizy'
+                target='_blank'
+                rel='noreferrer'
+                className='icofont-facebook-messenger'
+              ></a>
+              <a
+                href='https://github.com/dvdcszy'
+                target='_blank'
+                rel='noreferrer'
+                className='fa-brands fa-github'
+              ></a>
             </span>
           </section>
         </div>

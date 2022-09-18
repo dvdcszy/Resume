@@ -4,11 +4,50 @@
   justify-content: center;
 }
 
+.thanks {
+  font-family: Kanit-Light;
+  color: #e7ff7f;
+  font-size: 20px;
+  line-height: 55px;
+  letter-spacing: 1px;
+  align-self: center;
+}
+
 form {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.mainContainer form .submitBtn {
+  background: #1b1b33;
+  color: #e7ff7f;
+  border-style: outset;
+  border-color: #e7ff7f;
+  border-radius: 5px;
+  height: 2rem;
+  width: 100px;
+  font-family: Kanit-Light;
+  letter-spacing: 1.25px;
+  text-shadow: none;
+  font-size: 15px;
+  margin-top: 1.5rem;
+}
+
+.mainContainer form .submitBtn:hover {
+  background: #e7ff7f;
+  color: #1b1b33;
+  border-style: outset;
+  border-color: #e7ff7f;
+  border-radius: 5px;
+  height: 2rem;
+  width: 100px;
+  font-family: Kanit-Light;
+  letter-spacing: 1.25px;
+  text-shadow: none;
+  font-size: 15px;
+  margin-top: 1.5rem;
 }
 
 ::placeholder {
@@ -25,7 +64,7 @@ input[name='from_name'] {
   border-radius: 9px;
   min-width: 600px;
   min-height: 41px;
-  margin-bottom: 2em;
+  margin-bottom: 1.5rem;
   outline: none;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;

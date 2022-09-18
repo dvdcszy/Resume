@@ -11,12 +11,17 @@ const AboutComponent = () => {
         <p className={styles.summaryText}>
           <img className={styles.dot} src={portrait} alt='Image of me' />
           <span className={styles.summaryText}>
-            Lorem Lorem ipsum dolor sit amet, constetuer adipiscing elit, sed
-            diam nonummy nibh Lorem ipsum dolor sit amet, consec
+            Experienced supply chain analyst with a demonstrated history of
+            working in the electrical and electronic manufacturing industry.
+            Strong operations professional with enthusiasm for digital and
+            automated solutions as a certified Microsoft Azure developer.
           </span>
         </p>
       </div>
       <div className={styles.experiences}>
+        <div>
+          <h2>EDUCATION AND EXPERIENCES</h2>
+        </div>
         {/*         <div>
           <h2>EDUCATION</h2>
           <h2>EXPERIENCE</h2>

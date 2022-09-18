@@ -34,12 +34,14 @@ const ContactMeComponent = () => {
   return (
     <div className={styles.mainContainer}>
       {submittedForm.isMessageSent ? (
-        <h4>Thank you!</h4>
+        <h4 className={styles.thanks}>
+          Thank you, I will get back to You ASAP!
+        </h4>
       ) : (
         <form onSubmit={sendEmail}>
           <input type='text' name='from_name' />
           <textarea name='message' />
-          <input type='submit' value='Send' />
+          <input className={styles.submitBtn} type='submit' value='Send' />
         </form>
       )}
       <div className={styles.contactCard}>
