@@ -17,6 +17,9 @@ const NavigationBar = () => {
           <img id={styles.logo} src={initialsLogo} alt='My logo' />
         </NavLink>
       </div>
+      <button className={styles.hamburger}>
+        <i className='icofont-navigation-menu'></i>
+      </button>
       <div id={styles.second}>
         <NavLink to='/' style={({ isActive }) => (isActive ? activeStyle : {})}>
           Home
