@@ -6,7 +6,6 @@ pool:
 
 stages:
   - stage: CI
-    displayname: Building React App
     - steps:
       - task: NodeTool@0
         inputs:
