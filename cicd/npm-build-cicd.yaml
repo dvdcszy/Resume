@@ -20,3 +20,9 @@ stages:
                 targetPath: '$(Pipeline.Workspace)'
                 artifact: 'resume_site'
                 publishLocation: 'pipeline'
+          - task: AzureStaticWebApp@0
+            inputs:
+              app_location: '/src'
+              skip_app_build: true
+              skip_api_build: true
+              azure_static_web_apps_api_token: '5f1fae9b684ef42d495791f004ae9831c077a207f6724f559144e0d61ca2facc1-369a9c80-e8d5-4ef9-99a1-2d013ea1bb62003129882'
