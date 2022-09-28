@@ -4,8 +4,8 @@ trigger:
 pool:
   vmImage: windows-latest
 
-stages:
-  - stage: CI
+#stages:
+#  - stage: CI
       steps:
         - task: NodeTool@0
           inputs:
