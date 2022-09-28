@@ -64,12 +64,14 @@ span a {
     letter-spacing: 4.75px;
     margin-left: 5px;
     margin-bottom: -70px;
+    transition: 0.2s;
   }
 
   .name {
     font-size: 75px;
     letter-spacing: 4.75px;
     margin-bottom: -25px;
+    transition: 0.2s;
   }
 
   .summary {
@@ -77,5 +79,31 @@ span a {
     letter-spacing: 4.75px;
     margin-left: 5px;
     text-overflow: clip;
+    transition: 0.2s;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .welcome {
+    font-size: 20px;
+    letter-spacing: 4.75px;
+    margin-left: 5px;
+    margin-bottom: -70px;
+    transition: 0.2s;
+  }
+
+  .name {
+    font-size: 50px;
+    letter-spacing: 4.75px;
+    margin-bottom: -25px;
+    transition: 0.2s;
+  }
+
+  .summary {
+    font-size: 10px;
+    letter-spacing: 4.75px;
+    margin-left: 5px;
+    text-overflow: clip;
+    transition: 0.2s;
   }
 }

@@ -146,3 +146,14 @@ div.contactCard {
   align-self: center;
   margin-left: 2em;
 }
+
+@media screen and (max-width: 850px) {
+  .mainContainer {
+    flex-direction: column;
+  }
+  div.contactCard {
+    margin-left: 0px;
+    align-self: center;
+    margin-top: 4rem;
+  }
+}

@@ -17,6 +17,7 @@
   text-decoration: underline;
   margin-top: 3em;
   margin-bottom: 1em;
+  transition: 0.2s;
 }
 
 .mainContainer > div {
@@ -33,6 +34,7 @@
   line-height: 30px;
   letter-spacing: 1.25px;
   text-decoration: underline;
+  transition: 0.2s;
 }
 
 .mainContainer > div > h4 {
@@ -44,4 +46,12 @@
 
 .mainContainer > img {
   max-width: 70%;
+}
+
+@media screen and (max-width: 850px) {
+  .mainContainer > div > h2,
+  .mainContainer > h2 {
+    font-size: 15px;
+    transition: 0.2s;
+  }
 }

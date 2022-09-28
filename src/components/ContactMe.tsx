@@ -1,10 +1,16 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from '../Styles/Contactme.module.css';
 import '../Styles/icofont.min.css';
 import '../Styles/brands.min.css';
 import emailjs from '@emailjs/browser';
 
 const ContactMeComponent = () => {
+  useEffect(() => {
+    const m = localStorage.getItem('sentMessage');
+    if (m !== null && m === 'true') {
+      setIsMessageSent({ isMessageSent: true });
+    }
+  }, []);
   interface SubmittedForm {
     isMessageSent: boolean;
   }
@@ -21,8 +27,8 @@ const ContactMeComponent = () => {
         'uDytv20x8CsKfGK0k',
       )
       .then(
-        (result: { text: string }) => {
-          console.log(result.text);
+        () => {
+          localStorage.setItem('sentMessage', 'true');
         },
         (error: { text: string }) => {
           console.log(error.text);

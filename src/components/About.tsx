@@ -8,9 +8,9 @@ const AboutComponent = () => {
     <div className={styles.mainContainer}>
       <div className={styles.intro}>
         {/*         <h2>ABOUT ME</h2> */}
-        <p className={styles.summaryText}>
+        <p className={styles.summaryTextP}>
           <img className={styles.dot} src={portrait} alt='Image of me' />
-          <span className={styles.summaryText}>
+          <span className={styles.summaryTextSpan}>
             Experienced supply chain analyst with a demonstrated history of
             working in the electrical and electronic manufacturing industry.
             Strong operations professional with enthusiasm for digital and
