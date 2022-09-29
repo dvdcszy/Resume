@@ -18,10 +18,15 @@ stages:
               targetPath: '$(Pipeline.Workspace)'
               artifact: 'resume_site'
               publishLocation: 'pipeline'
+          - task: DownloadPipelineArtifact@2
+            inputs:
+              buildType: 'current'
+              artifactName: 'resume_site'
+              targetPath: '$(System.DefaultWorkingDirectory)'
           - task: AzureRmWebAppDeployment@4
             inputs:
               ConnectionType: 'AzureRM'
               azureSubscription: 'AzurePortalServiceConncetion'
               appType: 'webApp'
               WebAppName: 'davidcsizy'
-              packageForLinux: '$(Pipeline.Workspace)/*.zip'
+              packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
