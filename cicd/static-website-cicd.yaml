@@ -3,7 +3,7 @@ stages:
     jobs:
       - job: CI
         pool:
-          vmImage: windows-latest
+          vmImage: ubuntu-latest
         steps:
           - task: AzureStaticWebApp@0
             inputs:
