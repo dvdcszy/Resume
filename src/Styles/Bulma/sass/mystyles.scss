@@ -1,0 +1,48 @@
+@charset "utf-8";
+
+$yellow: #e7ff7f;
+$background: #1b1b33;
+$primary: $yellow;
+
+@font-face {
+  font-family: 'Kanit-SemiBold';
+  src: local('Kanit-SemiBold'),
+    url(../../../Fonts/Kanit-SemiBold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Kanit-Regular';
+  src: local('Kanit-Regular'),
+    url(../../../Fonts/Kanit-Regular.ttf) format('truetype');
+}
+
+$navbar-background-color: $background;
+$navbar-item-hover-background-color: transparent;
+
+.navbar-item a {
+  font-family: Kanit-Regular;
+  font-size: 23px;
+  letter-spacing: 0.92px;
+  color: #ffffff;
+  margin-right: 100px;
+  text-decoration: none;
+  margin-top: 2rem;
+}
+
+.navbar-item {
+  &.is-active {
+    text-decoration: none;
+  }
+}
+
+.navbar-item a:hover,
+.navbar-item a:active,
+.navbar-item a.active {
+  text-decoration: none;
+  background-color: transparent;
+  color: $yellow;
+}
+
+@import '../node_modules/bulma/sass/utilities/_all.sass';
+@import '../node_modules/bulma/sass/base/_all.sass';
+@import '../node_modules/bulma/sass/components/navbar.sass';

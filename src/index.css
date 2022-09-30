@@ -1,11 +1,11 @@
-html,
 body {
   margin: 0;
   padding: 0;
-  background-color: #040421;
   display: flex;
   justify-content: center;
-  align-items: center;
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #040421;
 }
 
 @font-face {

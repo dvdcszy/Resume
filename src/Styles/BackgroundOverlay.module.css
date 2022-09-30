@@ -1,9 +1,10 @@
 .backgroundOverlay {
   display: flex;
   flex-direction: column;
+  margin-top: 1rem;
   background-color: #1b1b33;
-  width: 98vw;
-  min-height: 98vh;
+  width: 97vw;
+  min-height: 96vh;
   border-radius: 20px;
 }
 

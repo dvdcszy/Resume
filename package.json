@@ -11,6 +11,7 @@
     "@types/node": "^16.11.45",
     "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.6",
+    "bulma": "^0.9.4",
     "emailjs-com": "^3.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -26,7 +27,10 @@
     "eject": "react-scripts eject",
     "lint": "eslint src/**/*.{js,jsx,ts,tsx,json}",
     "lint:fix": "eslint --fix 'src/**/*.{js,jsx,ts,tsx,json}'",
-    "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
+    "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
+    "css-build": "node-sass --omit-source-map-url src/Styles/Bulma/sass/mystyles.scss src/Styles/Bulma/css/mystyles.css",
+    "css-watch": "npm run css-build -- --watch",
+    "run-css-watch": "npm run css-watch"
   },
   "browserslist": {
     "production": [
@@ -48,6 +52,7 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.30.1",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "node-sass": "^7.0.3",
     "prettier": "^2.7.1"
   },
   "packageManager": "yarn@3.2.1"

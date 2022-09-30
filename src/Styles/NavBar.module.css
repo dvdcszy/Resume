@@ -1,7 +1,6 @@
-nav {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.transparentNavbar {
+  background-color: transparent;
+  background-image: none;
 }
 
 #navBar {

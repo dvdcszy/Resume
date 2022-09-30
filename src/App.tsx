@@ -6,13 +6,12 @@ import SkillsAndTechsComponent from './Components/SkillsAndTechs';
 import ContactMeComponent from './Components/ContactMe';
 import NavigationBar from './Components/NavBar';
 import { Routes, Route } from 'react-router-dom';
+import './Styles/Bulma/css/mystyles.css';
 
 function App() {
   return (
     <div className={bgStyles.backgroundOverlay}>
-      <header>
-        <NavigationBar />
-      </header>
+      <NavigationBar />
       <div className={bgStyles.content}>
         <Routes>
           <Route path='/' element={<HomeComponent />} />

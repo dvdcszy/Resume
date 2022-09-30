@@ -1,71 +1,42 @@
-import React, { useState } from 'react';
-import styles from '../Styles/NavBar.module.css';
+import React, { useRef } from 'react';
+import '../Styles/NavBar.module.css';
 import '../Styles/icofont.min.css';
 import initialsLogo from '../Images/initials.png';
+
 import { NavLink } from 'react-router-dom';
 
 const NavigationBar = () => {
-  const activeStyle = {
-    color: '#e7ff7f',
-    textDecoration: 'none',
-  };
-  const [isNavExpanded, setIsNavExpanded] = useState<boolean>(false);
-
-  const toggleButtonClick = () => {
-    setIsNavExpanded(!isNavExpanded);
+  const navRef = useRef() as React.MutableRefObject<HTMLDivElement>;
+  const toggleBurger = () => {
+    navRef.current.classList.toggle('is-active');
   };
   return (
-    <>
-      <div id={styles.navBar}>
-        <NavLink to='/'>
-          <img id={styles.logo} src={initialsLogo} alt='My logo' />
-        </NavLink>
-        <nav
-          className={isNavExpanded ? styles.openNavMenu : styles.closedNavMenu}
+    <nav className='navbar' role='navigation' aria-label='main navigation'>
+      <div className='navbar-brand'>
+        <a className='navbar-item' href='/'>
+          <img src={initialsLogo} alt='My logo' />
+        </a>
+        <div
+          ref={navRef}
+          className='navbar-burger'
+          onClick={() => toggleBurger()}
         >
-          <div id={styles.second}>
-            <NavLink
-              to='/'
-              style={({ isActive }) => (isActive ? activeStyle : {})}
-              onClick={() => setIsNavExpanded(false)}
-            >
-              Home
-            </NavLink>
-            <NavLink
-              to='/about'
-              style={({ isActive }) => (isActive ? activeStyle : {})}
-              onClick={() => setIsNavExpanded(false)}
-            >
-              About
-            </NavLink>
-            <NavLink
-              to='/skillsandtechs'
-              style={({ isActive }) => (isActive ? activeStyle : {})}
-              onClick={() => setIsNavExpanded(false)}
-            >
-              <span>Techs</span>
-            </NavLink>
-            <NavLink
-              to='/contactme'
-              style={({ isActive }) => (isActive ? activeStyle : {})}
-              onClick={() => setIsNavExpanded(false)}
-            >
-              <span>Contact</span>
-            </NavLink>
-            <button
-              className={styles.hamburger}
-              onClick={() => toggleButtonClick()}
-            >
-              <i
-                className={
-                  isNavExpanded ? 'icofont-ui-close' : 'icofont-navigation-menu'
-                }
-              ></i>
-            </button>
-          </div>
-        </nav>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </div>
-    </>
+      <div ref={navRef} className='navbar-menu' id='nav-links'>
+        <div className='navbar-end'>
+          <a className='navbar-item'>
+            <NavLink to='/'>Home</NavLink>
+            <NavLink to='/about'>About</NavLink>
+            <NavLink to='/skillsandtechs'>Skills</NavLink>
+            <NavLink to='/contactme'>Contact</NavLink>
+          </a>
+        </div>
+      </div>
+    </nav>
   );
 };
 
