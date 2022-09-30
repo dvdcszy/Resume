@@ -22,8 +22,8 @@ nav #second {
   padding-top: 36px;
 }
 
-nav div a {
-  font-family: Kanit;
+#navBar div a {
+  font-family: Kanit-Regular;
   font-size: 23px;
   letter-spacing: 0.92px;
   color: #ffffff;
