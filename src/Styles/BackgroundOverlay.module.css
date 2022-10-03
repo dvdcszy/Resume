@@ -1,6 +1,7 @@
 .backgroundOverlay {
   display: flex;
   flex-direction: column;
+  flex-shrink: 1;
   margin-top: 1rem;
   background-color: #1b1b33;
   width: 97vw;

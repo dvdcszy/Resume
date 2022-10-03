@@ -16,15 +16,6 @@
   margin-top: -80px;
 }
 
-.imageContainer {
-  min-width: 190px;
-}
-
-.imageContainer img {
-  width: 100%;
-  object-fit: cover;
-}
-
 .welcome {
   font-size: 40px;
   letter-spacing: 4.75px;
@@ -33,6 +24,8 @@
 }
 
 .name {
+  font-family: Kanit-Light;
+  color: #ffffff;
   font-size: 95px;
   letter-spacing: 4.75px;
   margin-bottom: -25px;

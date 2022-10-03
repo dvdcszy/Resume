@@ -12,7 +12,7 @@ function App() {
   return (
     <div className={bgStyles.backgroundOverlay}>
       <NavigationBar />
-      <div className={bgStyles.content}>
+      <div className='container is-flex is-flex-grow-1 is-align-items-center is-justify-content-center'>
         <Routes>
           <Route path='/' element={<HomeComponent />} />
           <Route path='/about' element={<AboutComponent />} />

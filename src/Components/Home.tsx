@@ -5,16 +5,15 @@ import '../Styles/brands.min.css';
 
 const HomeComponent = () => {
   return (
-    <div className='container is-align-items-center is-justify-content-center'>
+    <div className='container is-flex is-flex-direction-column'>
       <h3 className='title is-3 is-size-5-touch'>HELLO, I&apos;M</h3>
-      <p className='title is-1 is-size-2-touch'>DAVID CSIZY</p>
-      <h4 className='subtitle is-3 is-size-5-touch'>
-        Experienced supply chain analyst
-        <br />
-        with enthusiasm for digital and automated solutions.
-      </h4>
-      <section className={styles.social}>
-        <span>
+      <h1 className='title is-1 is-size-2-touch'>DAVID CSIZY</h1>
+      <p className='subtitle is-5 is-size-6-touch is-primary'>
+        Experienced supply chain analyst with enthusiasm <br />
+        for digital and automated solutions.
+      </p>
+      <section className='section is-flex is-justify-content-center'>
+        <span className={styles.social}>
           <a
             href='https://www.linkedin.com/in/david-csizy-7ab5a063/'
             target='_blank'

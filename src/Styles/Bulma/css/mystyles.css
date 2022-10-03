@@ -1,24 +1,22 @@
 @font-face {
-  font-family: 'Kanit-SemiBold';
-  src: local("Kanit-SemiBold"), url(../../../Fonts/Kanit-SemiBold.ttf) format("truetype"); }
-
-@font-face {
-  font-family: 'Kanit-Regular';
-  src: local("Kanit-Regular"), url(../../../Fonts/Kanit-Regular.ttf) format("truetype"); }
-
-@font-face {
   font-family: 'Kanit-Light';
-  src: local("Kanit-Light"), url(../../../Fonts/Kanit-Light.ttf) format("Light"); }
+  src: local("Kanit-Light"), url(../../../Fonts/Kanit-Light.ttf) format("truetype"); }
 
 .title {
   letter-spacing: 4.75px;
   text-overflow: clip;
   font-family: Kanit-Light; }
+  @media screen and (min-width: 1024px) {
+    .title.is-1 {
+      font-size: 95px !important; } }
+  @media screen and (min-width: 1024px) {
+    .title.is-3 {
+      font-size: 40px !important; } }
 
 .subtitle {
   letter-spacing: 4.75px;
   font-family: Kanit-Light;
-  text-overflow: clip; }
+  overflow-wrap: break-word; }
 
 .navbar {
   border-radius: 20px; }

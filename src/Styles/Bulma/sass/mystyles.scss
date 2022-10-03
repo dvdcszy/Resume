@@ -1,32 +1,33 @@
 @charset "utf-8";
-@import '../node_modules/bulma/sass/utilities/initial-variables.sass';
 @import '../node_modules/bulma/sass/utilities/mixins.sass';
+@import '../node_modules/bulma/sass/utilities/initial-variables.sass';
+
+@font-face {
+  font-family: 'Kanit-Light';
+  src: local('Kanit-Light'),
+    url(../../../Fonts/Kanit-Light.ttf) format('truetype');
+}
 
 $yellow: #e7ff7f;
 $background: #1b1b33;
 $primary: $yellow;
-
-@font-face {
-  font-family: 'Kanit-SemiBold';
-  src: local('Kanit-SemiBold'),
-    url(../../../Fonts/Kanit-SemiBold.ttf) format('truetype');
-}
-
-@font-face {
-  font-family: 'Kanit-Regular';
-  src: local('Kanit-Regular'),
-    url(../../../Fonts/Kanit-Regular.ttf) format('truetype');
-}
-
-@font-face {
-  font-family: 'Kanit-Light';
-  src: local('Kanit-Light'), url(../../../Fonts/Kanit-Light.ttf) format('Light');
-}
+$medium: 40px;
+$larger: 95px;
 
 $title-color: $white;
 $subtitle-color: $white;
 
 .title {
+  &.is-1 {
+    @include desktop {
+      font-size: $larger !important;
+    }
+  }
+  &.is-3 {
+    @include desktop {
+      font-size: $medium !important;
+    }
+  }
   letter-spacing: 4.75px;
   text-overflow: clip;
   font-family: Kanit-Light;
@@ -35,7 +36,7 @@ $subtitle-color: $white;
 .subtitle {
   letter-spacing: 4.75px;
   font-family: Kanit-Light;
-  text-overflow: clip;
+  overflow-wrap: break-word;
 }
 
 $navbar-background-color: $background;
