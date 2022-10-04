@@ -21,7 +21,6 @@ stages:
           - task: PublishBuildArtifacts@1
             inputs:
               PathtoPublish: build
-              ArtifactName: drop
 
           - task: AzureRmWebAppDeployment@4
             inputs:
@@ -30,3 +29,4 @@ stages:
               appType: 'webApp'
               WebAppName: 'davidcsizy'
               packageForLinux: '$(System.DefaultWorkingDirectory)/drop'
+          
