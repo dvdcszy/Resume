@@ -21,10 +21,10 @@ const ContactMeComponent = () => {
     e.preventDefault();
     emailjs
       .sendForm(
-        String(process.env.REACT_APP_SEND_MESSAGE_SERVICE_ID),
-        String(process.env.REACT_APP_SEND_MESSAGE_TEMPLATE_ID),
+        String(process.env.APPSETTING_REACT_APP_SEND_MESSAGE_SERVICE_ID),
+        String(process.env.APPSETTING_REACT_APP_SEND_MESSAGE_TEMPLATE_ID),
         e.currentTarget,
-        String(process.env.REACT_APP_SEND_MESSAGE_PUBLIC_KEY),
+        String(process.env.APPSETTING_REACT_APP_SEND_MESSAGE_PUBLIC_KEY),
       )
       .then(
         () => {
