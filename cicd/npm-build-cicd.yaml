@@ -7,29 +7,22 @@ stages:
         pool:
           vmImage: windows-latest
         steps:
-          - task: NodeTool@0
+          - task: Npm@1
+            displayName: 'npm install'
             inputs:
-              versionSpec: '10.x'
-            displayName: 'Install Node.js dependencies'
-          - script: |
-              npm install
-              npm run build
-            displayName: 'npm install and build'
-          - task: PublishPipelineArtifact@1
+              verbose: false
+
+          - task: Npm@1
+            displayName: 'npm run build'
             inputs:
-              targetPath: '$(Pipeline.Workspace)'
-              artifact: 'resume_site'
-              publishLocation: 'pipeline'
+              command: custom
+              verbose: false
+              customCommand: 'run build'
           - task: PublishBuildArtifacts@1
             inputs:
-              PathtoPublish: 'build'
+              PathtoPublish: build
               ArtifactName: 'drop'
-              publishLocation: 'Container'
-          - task: DownloadPipelineArtifact@2
-            inputs:
-              buildType: 'current'
-              artifactName: 'resume_site'
-              targetPath: '$(System.DefaultWorkingDirectory)'
+
           - task: AzureRmWebAppDeployment@4
             inputs:
               ConnectionType: 'AzureRM'
