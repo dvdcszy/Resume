@@ -39,17 +39,19 @@ const ContactMeComponent = () => {
   };
   return (
     <div className={styles.mainContainer}>
-      {submittedForm.isMessageSent ? (
-        <h4 className={styles.thanks}>
-          Thank you, I will get back to You ASAP!
-        </h4>
-      ) : (
-        <form onSubmit={sendEmail}>
-          <input type='text' name='from_name' />
-          <textarea name='message' />
-          <input className={styles.submitBtn} type='submit' value='Send' />
-        </form>
-      )}
+      <div>
+        {submittedForm.isMessageSent ? (
+          <h4 className={styles.thanks}>
+            Thank you, I will get back to You ASAP!
+          </h4>
+        ) : (
+          <form onSubmit={sendEmail}>
+            <input type='text' name='from_name' />
+            <textarea name='message' />
+            <input className={styles.submitBtn} type='submit' value='Send' />
+          </form>
+        )}
+      </div>
       <div className={styles.contactCard}>
         <div className={styles.row}>
           <div className={styles.icon}>

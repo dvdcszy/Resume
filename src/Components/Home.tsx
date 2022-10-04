@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from '../Styles/Home.module.css';
-import '../Styles/icofont.min.css';
 import '../Styles/brands.min.css';
 
 const HomeComponent = () => {
@@ -18,13 +17,13 @@ const HomeComponent = () => {
             href='https://www.linkedin.com/in/david-csizy-7ab5a063/'
             target='_blank'
             rel='noreferrer'
-            className='icofont-linkedin'
+            className='fa-brands fa-linkedin'
           ></a>
           <a
             href='http://m.me/david.csizy'
             target='_blank'
             rel='noreferrer'
-            className='icofont-facebook-messenger'
+            className='fa-brands fa-facebook-messenger'
           ></a>
           <a
             href='https://github.com/dvdcszy'

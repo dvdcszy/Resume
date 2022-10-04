@@ -4,12 +4,11 @@
   flex-direction: column;
   flex-wrap: wrap;
   color: #fff;
-  max-width: 70%;
 }
 
 .mainContainer > h2 {
   flex: 1;
-  width: 70%;
+  width: 90%;
   font-family: Kanit-Regular;
   font-size: 25px;
   line-height: 30px;
@@ -23,7 +22,8 @@
 .mainContainer > div {
   display: flex;
   justify-content: space-between;
-  width: 70%;
+  align-items: center;
+  width: 90%;
   margin-top: 3em;
   margin-bottom: 1em;
 }
@@ -45,7 +45,7 @@
 }
 
 .mainContainer > img {
-  max-width: 70%;
+  max-width: 90%;
 }
 
 @media screen and (max-width: 850px) {

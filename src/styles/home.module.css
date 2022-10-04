@@ -3,41 +3,6 @@
   src: local('Kanit-Light'), url(../Fonts/Kanit-Light.ttf) format('truetype');
 }
 
-.mainContent {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-
-.textContainer {
-  font-family: Kanit-Light;
-  color: #ffffff;
-  margin-top: -80px;
-}
-
-.welcome {
-  font-size: 40px;
-  letter-spacing: 4.75px;
-  margin-left: 5px;
-  margin-bottom: -70px;
-}
-
-.name {
-  font-family: Kanit-Light;
-  color: #ffffff;
-  font-size: 95px;
-  letter-spacing: 4.75px;
-  margin-bottom: -25px;
-}
-
-.summary {
-  font-size: 20px;
-  letter-spacing: 4.75px;
-  margin-left: 5px;
-  text-overflow: clip;
-}
-
 .social {
   display: flex;
   justify-content: center;
@@ -49,4 +14,19 @@ span a {
   margin-right: 150px;
   color: #e7ff7f;
   text-decoration: none;
+}
+
+@media screen and (max-width: 850px) {
+  .social {
+    display: flex;
+    justify-content: center;
+    margin-left: 15px;
+  }
+
+  span a {
+    font-size: 27px;
+    margin-right: 70px;
+    color: #e7ff7f;
+    text-decoration: none;
+  }
 }

@@ -6,7 +6,10 @@
 }
 
 .intro {
-  width: 50%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .mainContainer h2 {
@@ -22,7 +25,7 @@
   display: flex;
   align-items: center;
   margin-bottom: 2rem;
-  width: 100%;
+  width: 50%;
   margin-top: 2rem;
 }
 
@@ -34,8 +37,8 @@
   align-self: center;
 }
 
-.dot {
-  width: auto;
+.portraitImage {
+  width: 100%;
   height: auto;
   max-width: 140px;
   margin-right: 25px;
@@ -47,30 +50,36 @@
 
 .experiences {
   display: flex;
-  max-width: 50%;
+  max-width: 80%;
   flex-direction: column;
   margin-bottom: 2rem;
 }
 
-.experiences > div {
+.experiences > h2 {
   width: 100%;
   display: flex;
-  align-items: center;
   justify-content: center;
-  margin-bottom: 2rem;
-}
-
-img {
-  max-width: 100%;
+  margin-bottom: 3rem;
 }
 
 @media screen and (max-width: 850px) {
   .summaryTextSpan {
     font-size: 15px;
     transition: 0.2s;
+    margin-top: 3rem;
   }
 
-  .experiences h2 {
+  .summaryTextP {
+    width: 90%;
+  }
+
+  .experiences {
+    width: 100%;
+  }
+  .experiences > h2 {
     font-size: 20px;
+  }
+  .intro {
+    flex-direction: column;
   }
 }

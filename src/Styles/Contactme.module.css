@@ -20,7 +20,7 @@ form {
   justify-content: center;
 }
 
-.mainContainer form .submitBtn {
+form .submitBtn {
   background: #1b1b33;
   color: #e7ff7f;
   border-style: outset;
@@ -87,23 +87,22 @@ textarea[name='message'] {
   resize: none;
 }
 
-div.contactCard {
+.contactCard {
   width: 350px;
   flex: 1;
   border-style: Solid;
   border-color: #e7ff7f;
   border-width: 4px;
   border-radius: 9px;
-  margin-left: 165px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
   font-family: Kanit-Light;
   font-size: 15px;
   letter-spacing: 0.75px;
   color: #e7ff7f;
   padding-left: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
 }
 
 .row {
@@ -148,12 +147,38 @@ div.contactCard {
 }
 
 @media screen and (max-width: 850px) {
+  input[name='from_name'] {
+    min-width: 400px;
+  }
+  textarea[name='message'] {
+    min-width: 400px;
+  }
+  .contactCard {
+    min-width: 400px;
+    margin-top: 50px;
+  }
+
   .mainContainer {
     flex-direction: column;
   }
-  div.contactCard {
-    margin-left: 0px;
-    align-self: center;
-    margin-top: 4rem;
+}
+
+@media screen and (max-width: 450px) {
+  input[name='from_name'] {
+    min-width: 350px;
+  }
+  textarea[name='message'] {
+    min-width: 350px;
+  }
+  .contactCard {
+    min-width: 350px;
+    margin-top: 50px;
+    margin-right: 0 !important;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .contactCard {
+    margin-left: 165px;
   }
 }

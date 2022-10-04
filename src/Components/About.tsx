@@ -7,9 +7,14 @@ const AboutComponent = () => {
   return (
     <div className={styles.mainContainer}>
       <div className={styles.intro}>
-        {/*         <h2>ABOUT ME</h2> */}
+        <figure className='image is-128x128 mr-6'>
+          <img
+            className={styles.portraitImage}
+            src={portrait}
+            alt='Image of me'
+          />
+        </figure>
         <p className={styles.summaryTextP}>
-          <img className={styles.dot} src={portrait} alt='Image of me' />
           <span className={styles.summaryTextSpan}>
             Experienced supply chain analyst with a demonstrated history of
             working in the electrical and electronic manufacturing industry.
@@ -19,13 +24,7 @@ const AboutComponent = () => {
         </p>
       </div>
       <div className={styles.experiences}>
-        <div>
-          <h2>EDUCATION AND EXPERIENCES</h2>
-        </div>
-        {/*         <div>
-          <h2>EDUCATION</h2>
-          <h2>EXPERIENCE</h2>
-        </div> */}
+        <h2>EDUCATION AND EXPERIENCES</h2>
         <img src={careerPathImg} alt='Career timeline' />
       </div>
     </div>
