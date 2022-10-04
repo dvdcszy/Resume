@@ -29,5 +29,5 @@ stages:
               azureSubscription: 'AzurePortalServiceConncetion'
               appType: 'webApp'
               WebAppName: 'davidcsizy'
-              packageForLinux: '$(System.DefaultWorkingDirectory)/Resume/drop'
+              packageForLinux: '$(System.DefaultWorkingDirectory)/Resume/drop/s/build'
           
