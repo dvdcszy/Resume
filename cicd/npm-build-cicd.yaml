@@ -18,8 +18,15 @@ stages:
             displayName: 'npm run build'
             inputs:
               command: custom
-              verbose: true
+              verbose: false
               customCommand: 'run build'
+              
+          - task: Npm@1      
+            displayName: 'list config'
+            inputs:
+              command: custom
+              verbose: true
+              customCommand: 'config list'
 
           - task: PublishBuildArtifacts@1
             inputs:
