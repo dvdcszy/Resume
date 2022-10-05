@@ -43,6 +43,9 @@ stages:
               path: '$(Pipeline.Workspace)'
               ArtifactName: drop
               artifactType: 'pipeline'
+          - task: CmdLine@2
+            inputs:
+              script: 'echo $(Pipeline.Workspace)'
   - stage: CD
     displayName: Deploy to App service
     dependsOn: CI
@@ -59,4 +62,4 @@ stages:
               azureSubscription: 'AzurePortalServiceConncetion'
               appType: 'webApp'
               WebAppName: 'davidcsizy'
-              packageForLinux: '$(Pipeline.Workspace)/build'
+              packageForLinux: '$(Pipeline.Workspace)/s/build'
