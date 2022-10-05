@@ -1,4 +1,3 @@
-
 trigger: none
 stages:
   - stage: CI
@@ -42,7 +41,16 @@ stages:
             inputs:
               PathtoPublish: build
               ArtifactName: drop
-
+  - stage: CD
+    displayName: Deploy to App service
+    dependsOn: CI
+    condition: and(succeeded('CI'))
+    jobs:
+      - job: DeployApp
+        displayName: 'Deploy App'
+        pool:
+          vmImage: 'windows-latest'
+        steps:
           - task: AzureRmWebAppDeployment@4
             inputs:
               ConnectionType: 'AzureRM'
@@ -50,4 +58,3 @@ stages:
               appType: 'webApp'
               WebAppName: 'davidcsizy'
               packageForLinux: '$(System.DefaultWorkingDirectory)/build'
-          
