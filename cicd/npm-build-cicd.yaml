@@ -6,6 +6,8 @@ stages:
       - job: CI
         pool:
           vmImage: windows-latest
+        variables: 
+          REACT_APP_SEND_MESSAGE_SERVICE_ID: 'testvalue'
         steps:
           - task: Npm@1
             displayName: 'npm install'
@@ -16,7 +18,7 @@ stages:
             displayName: 'npm run build'
             inputs:
               command: custom
-              verbose: false
+              verbose: true
               customCommand: 'run build'
 
           - task: PublishBuildArtifacts@1
