@@ -12,12 +12,15 @@ stages:
             inputs:
               verbose: false
 
-          - task: Npm@1
-            displayName: 'npm run build'
-            inputs:
-              command: custom
-              verbose: false
-              customCommand: '$ REACT_APP_SEND_MESSAGE_SERVICE_ID = testvalue run build'
+          #- task: Npm@1
+            #displayName: 'npm run build'
+            #inputs:
+              #command: custom
+              #verbose: false
+              #customCommand: '$ REACT_APP_SEND_MESSAGE_SERVICE_ID = testvalue run build'
+          - script: |
+                    '$ REACT_APP_SEND_MESSAGE_SERVICE_ID = testvalue npm run build'
+
           - task: PublishBuildArtifacts@1
             inputs:
               PathtoPublish: build
