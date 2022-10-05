@@ -17,6 +17,7 @@ stages:
               keyVaultName: 'kv-resume-app'
               secretsFilter: '*'
               runAsPreJob: true
+          - bash: echo $(reactAppSendMessageServiceId)
           - task: Bash@3
             displayName: Environment Variables
             inputs:
