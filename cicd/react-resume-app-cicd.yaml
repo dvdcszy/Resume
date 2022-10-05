@@ -52,7 +52,7 @@ stages:
     condition: succeeded('CI')
     jobs:
       - job: DeployApp
-        displayName: 'Deploy App'
+        displayName: 'CD'
         pool:
           vmImage: 'windows-latest'
         steps:
@@ -69,4 +69,4 @@ stages:
               azureSubscription: 'AzurePortalServiceConncetion'
               appType: 'webApp'
               WebAppName: 'davidcsizy'
-              packageForLinux: '$(System.DefaultWorkingDirectory)/s/build/**/**/*'
+              packageForLinux: '$(System.DefaultWorkingDirectory)/s/build'
