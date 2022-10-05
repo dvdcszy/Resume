@@ -7,23 +7,25 @@ stages:
         pool:
           vmImage: windows-latest
         variables: 
-          REACT_APP_SEND_MESSAGE_SERVICE_ID: 'service_syy18xq'
+          #REACT_APP_SEND_MESSAGE_SERVICE_ID: 'service_syy18xq'
           REACT_APP_SEND_MESSAGE_TEMPLATE_ID: 'template_c8p5sce'
           REACT_APP_SEND_MESSAGE_PUBLIC_KEY: 'uDytv20x8CsKfGK0k'
         steps:
           # Need to figure out how to plug in secrets
-          #- task: AzureKeyVault@2
-          #  inputs:
-          #    connectedServiceName: 'AzurePortalServiceConncetion'
-          #    keyVaultName: 'kv-resume-app'
-          #    secretsFilter: '*'
-          #    runAsPreJob: true
+          - task: AzureKeyVault@2
+            inputs:
+              connectedServiceName: 'AzurePortalServiceConncetion'
+              keyVaultName: 'kv-resume-app'
+              secretsFilter: '*'
+              runAsPreJob: true
           #- bash: |
           #        echo "Using the mapped env var for this task works and is recommended: $MY_MAPPED_ENV_VAR"
           #  env:
           #    REACT_APP_SEND_MESSAGE_SERVICE_ID: $(reactAppSendMessageServiceId) # the recommended way to map to an env variable
           - task: Bash@3
             displayName: Environment Variables
+            env:
+              REACT_APP_SEND_MESSAGE_SERVICE_ID: $(reactAppSendMessageServiceId)
             inputs:
               targetType: 'inline'
               script: 'env | sort'
