@@ -61,7 +61,7 @@ stages:
               buildType: 'current'
               artifactName: 'drop'
               targetPath: '$(System.DefaultWorkingDirectory)'
-          - powershell: Get-ChildItem -Path '$(System.DefaultWorkingDirectory)' -recurse
+          #- powershell: Get-ChildItem -Path '$(System.DefaultWorkingDirectory)' -recurse
 
           - task: AzureRmWebAppDeployment@4
             inputs:
@@ -69,4 +69,4 @@ stages:
               azureSubscription: 'AzurePortalServiceConncetion'
               appType: 'webApp'
               WebAppName: 'davidcsizy'
-              packageForLinux: '$(System.DefaultWorkingDirectory)/build/**'
+              packageForLinux: '$(System.DefaultWorkingDirectory)/s/build/**'
