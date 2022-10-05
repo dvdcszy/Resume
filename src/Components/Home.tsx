@@ -14,7 +14,7 @@ const HomeComponent = () => {
       <section className='section is-flex is-justify-content-center'>
         <span className={styles.social}>
           <a
-            href='https://www.linkedin.com/in/david-csizy-7ab5a063/'
+            href='https://www.linkedin.com/in/davidcsizy/'
             target='_blank'
             rel='noreferrer'
             className='fa-brands fa-linkedin'
