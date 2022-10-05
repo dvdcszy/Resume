@@ -7,7 +7,9 @@ stages:
         pool:
           vmImage: windows-latest
         variables: 
-          REACT_APP_SEND_MESSAGE_SERVICE_ID: 'testvalue'
+          REACT_APP_SEND_MESSAGE_SERVICE_ID: 'service_syy18xq'
+          REACT_APP_SEND_MESSAGE_TEMPLATE_ID: 'template_c8p5sce'
+          REACT_APP_SEND_MESSAGE_PUBLIC_KEY: 'uDytv20x8CsKfGK0k'
         steps:
           - task: Npm@1
             displayName: 'npm install'
@@ -20,13 +22,6 @@ stages:
               command: custom
               verbose: false
               customCommand: 'run build'
-              
-          - task: Npm@1      
-            displayName: 'list config'
-            inputs:
-              command: custom
-              verbose: true
-              customCommand: 'config list'
 
           - task: PublishBuildArtifacts@1
             inputs:
