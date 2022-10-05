@@ -1,10 +1,10 @@
 trigger:
   - master
 stages:
-  - stage: CICD
+  - stage: CI
     displayName: Build publish deploy
     jobs:
-      - job: CICD
+      - job: CI
         pool:
           vmImage: windows-latest
         steps:
