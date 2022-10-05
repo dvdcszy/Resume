@@ -5,7 +5,7 @@ import '../Styles/brands.min.css';
 import emailjs from '@emailjs/browser';
 
 const ContactMeComponent = () => {
-  console.log(String(process.env.APPSETTING_REACT_APP_SEND_MESSAGE_SERVICE_ID));
+  console.log(String(process.env.NODE_ENV));
   useEffect(() => {
     const m = localStorage.getItem('sentMessage');
     if (m !== null && m === 'true') {
