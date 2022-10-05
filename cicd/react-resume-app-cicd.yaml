@@ -59,4 +59,4 @@ stages:
               azureSubscription: 'AzurePortalServiceConncetion'
               appType: 'webApp'
               WebAppName: 'davidcsizy'
-              packageForLinux: '$(Pipeline.Workspace)'
+              packageForLinux: '$(Pipeline.Workspace)/build'
