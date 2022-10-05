@@ -38,7 +38,7 @@ stages:
               verbose: false
               customCommand: 'run build'
 
-          - task: PublishBuildArtifact@1
+          - task: PublishBuildArtifacts@1
             inputs:
               PathtoPublish: build
               ArtifactName: drop
