@@ -7,7 +7,6 @@ stages:
         pool:
           vmImage: windows-latest
         variables: 
-          REACT_APP_SEND_MESSAGE_SERVICE_ID: $(reactAppSendMessageServiceId)
           REACT_APP_SEND_MESSAGE_TEMPLATE_ID: 'template_c8p5sce'
           REACT_APP_SEND_MESSAGE_PUBLIC_KEY: 'uDytv20x8CsKfGK0k'
         steps:
@@ -17,7 +16,10 @@ stages:
               keyVaultName: 'kv-resume-app'
               secretsFilter: '*'
               runAsPreJob: true
-          - bash: echo $(reactAppSendMessageServiceId)
+          - powershell: |
+                        Write-Host "Using the mapped env var for this task works and is recommended: $env:MY_MAPPED_ENV_VAR"
+            env:
+              REACT_APP_SEND_MESSAGE_SERVICE_ID: $(reactAppSendMessageServiceId) # the recommended way to map to an env variable
           - task: Bash@3
             displayName: Environment Variables
             inputs:
