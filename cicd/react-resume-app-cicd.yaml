@@ -1,6 +1,7 @@
 trigger: none
 stages:
   - stage: CI
+    displayName: Build solution and publish artifact
     jobs:
       - job: CI
         pool:
