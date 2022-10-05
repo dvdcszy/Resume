@@ -17,7 +17,7 @@ stages:
             inputs:
               command: custom
               verbose: false
-              customCommand: 'run build'
+              customCommand: '$ REACT_APP_SEND_MESSAGE_SERVICE_ID = testvalue run build'
           - task: PublishBuildArtifacts@1
             inputs:
               PathtoPublish: build
