@@ -16,8 +16,8 @@ stages:
               keyVaultName: 'kv-resume-app'
               secretsFilter: '*'
               runAsPreJob: true
-          - powershell: |
-                        Write-Host "Using the mapped env var for this task works and is recommended: $env:MY_MAPPED_ENV_VAR"
+          - bash: |
+                  echo "Using the mapped env var for this task works and is recommended: $MY_MAPPED_ENV_VAR"
             env:
               REACT_APP_SEND_MESSAGE_SERVICE_ID: $(reactAppSendMessageServiceId) # the recommended way to map to an env variable
           - task: Bash@3
