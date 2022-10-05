@@ -1,9 +1,9 @@
 trigger: none
 stages:
-  - stage: CI
-    displayName: Build solution and publish artifact
+  - stage: CICD
+    displayName: Build publish deploy
     jobs:
-      - job: CI
+      - job: CICD
         pool:
           vmImage: windows-latest
         steps:
