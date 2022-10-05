@@ -38,10 +38,11 @@ stages:
               verbose: false
               customCommand: 'run build'
 
-          - task: PublishBuildArtifacts@1
+          - task: PublishPipelineArtifact@1
             inputs:
-              PathtoPublish: build
+              path: '$(Pipeline.Workspace)/build'
               ArtifactName: drop
+              artifactType: 'pipeline'
   - stage: CD
     displayName: Deploy to App service
     dependsOn: CI
@@ -58,4 +59,4 @@ stages:
               azureSubscription: 'AzurePortalServiceConncetion'
               appType: 'webApp'
               WebAppName: 'davidcsizy'
-              packageForLinux: '$(System.DefaultWorkingDirectory)/build'
+              packageForLinux: '$(Pipeline.Workspace)/build'
