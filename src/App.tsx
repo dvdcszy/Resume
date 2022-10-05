@@ -18,6 +18,7 @@ function App() {
           <Route path='/about' element={<AboutComponent />} />
           <Route path='/skillsandtechs' element={<SkillsAndTechsComponent />} />
           <Route path='/contactme' element={<ContactMeComponent />} />
+          <Route path='*' element={<HomeComponent />} />
         </Routes>
       </div>
     </div>
