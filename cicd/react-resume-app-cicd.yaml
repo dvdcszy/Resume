@@ -1,4 +1,5 @@
-trigger: master
+trigger:
+  - master
 stages:
   - stage: CICD
     displayName: Build publish deploy
