@@ -56,10 +56,15 @@ stages:
         pool:
           vmImage: 'windows-latest'
         steps:
+          - task: DownloadPipelineArtifact@2
+          inputs:
+            buildType: 'current'
+            artifactName: 'drop'
+            targetPath: '$(System.DefaultWorkingDirectory)'
           - task: AzureRmWebAppDeployment@4
             inputs:
               ConnectionType: 'AzureRM'
               azureSubscription: 'AzurePortalServiceConncetion'
               appType: 'webApp'
               WebAppName: 'davidcsizy'
-              packageForLinux: '$(Pipeline.Workspace)/s/build'
+              packageForLinux: '$(System.DefaultWorkingDirectory)/build/**'
