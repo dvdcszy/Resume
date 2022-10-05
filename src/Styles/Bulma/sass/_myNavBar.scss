@@ -1,0 +1,40 @@
+$navbar-background-color: $background;
+$navbar-burger-color: $yellow;
+$navbar-item-img-max-height: 5rem;
+$navbar-item-hover-background-color: transparent;
+
+.navbar {
+  border-radius: 20px;
+}
+
+.navbar-item a {
+  font-family: Kanit-Regular;
+  font-size: 23px;
+  letter-spacing: 0.92px;
+  color: #ffffff;
+  margin-right: 100px;
+  text-decoration: none;
+  margin-top: 2rem;
+}
+
+.navbar-menu {
+  &.is-active .navbar-end .navbar-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.navbar-item {
+  &.is-active {
+    text-decoration: none;
+  }
+}
+
+.navbar-item a:hover,
+.navbar-item a:active,
+.navbar-item a.active {
+  text-decoration: none;
+  background-color: transparent;
+  color: $yellow;
+}

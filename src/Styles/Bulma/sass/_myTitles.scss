@@ -1,0 +1,24 @@
+$title-color: $white;
+$subtitle-color: $white;
+
+.title {
+  &.is-1 {
+    @include desktop {
+      font-size: $larger !important;
+    }
+  }
+  &.is-3 {
+    @include desktop {
+      font-size: $medium !important;
+    }
+  }
+  letter-spacing: 4.75px;
+  text-overflow: clip;
+  font-family: Kanit-Light;
+}
+
+.subtitle {
+  letter-spacing: 4.75px;
+  font-family: Kanit-Light;
+  overflow-wrap: break-word;
+}
