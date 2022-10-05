@@ -6,6 +6,7 @@ import emailjs from '@emailjs/browser';
 
 const ContactMeComponent = () => {
   console.log(String(process.env.NODE_ENV));
+  console.log(String(process.env.REACT_APP_SEND_MESSAGE_SERVICE_ID));
   useEffect(() => {
     const m = localStorage.getItem('sentMessage');
     if (m !== null && m === 'true') {
@@ -22,10 +23,10 @@ const ContactMeComponent = () => {
     e.preventDefault();
     emailjs
       .sendForm(
-        String(process.env.APPSETTING_REACT_APP_SEND_MESSAGE_SERVICE_ID),
-        String(process.env.APPSETTING_REACT_APP_SEND_MESSAGE_TEMPLATE_ID),
+        String(process.env.REACT_APP_SEND_MESSAGE_SERVICE_ID),
+        String(process.env.REACT_APP_SEND_MESSAGE_TEMPLATE_ID),
         e.currentTarget,
-        String(process.env.APPSETTING_REACT_APP_SEND_MESSAGE_PUBLIC_KEY),
+        String(process.env.REACT_APP_SEND_MESSAGE_PUBLIC_KEY),
       )
       .then(
         () => {
