@@ -66,18 +66,7 @@ stages:
               buildType: 'current'
               artifactName: 'drop'
               targetPath: '$(System.DefaultWorkingDirectory)'
-          #- powershell: Get-ChildItem -Path '$(System.DefaultWorkingDirectory)/s' -recurse
-          #- task: Bash@3
-          #displayName: Environment Variables
-          #env:
-          #REACT_APP_SEND_MESSAGE_SERVICE_ID: $(reactAppSendMessageServiceId)
-          #REACT_APP_SEND_MESSAGE_TEMPLATE_ID: $(reactAppSendMessageTemplateId)
-          #REACT_APP_SEND_MESSAGE_PUBLIC_KEY: $(reactAppSendMessagePublicKey)
           - task: AzureRmWebAppDeployment@4
-            #env:
-            #REACT_APP_SEND_MESSAGE_SERVICE_ID: $(reactAppSendMessageServiceId)
-            #REACT_APP_SEND_MESSAGE_TEMPLATE_ID: $(reactAppSendMessageTemplateId)
-            #REACT_APP_SEND_MESSAGE_PUBLIC_KEY: $(reactAppSendMessagePublicKey)
             inputs:
               ConnectionType: 'AzureRM'
               azureSubscription: 'AzurePortalServiceConncetion'
