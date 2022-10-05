@@ -56,6 +56,12 @@ stages:
         pool:
           vmImage: 'windows-latest'
         steps:
+          - task: AzureKeyVault@2
+            inputs:
+              connectedServiceName: 'AzurePortalServiceConncetion'
+              keyVaultName: 'kv-resume-app'
+              secretsFilter: '*'
+              runAsPreJob: true
           - task: DownloadPipelineArtifact@2
             inputs:
               buildType: 'current'
@@ -64,6 +70,10 @@ stages:
           #- powershell: Get-ChildItem -Path '$(System.DefaultWorkingDirectory)/s' -recurse
 
           - task: AzureRmWebAppDeployment@4
+            env:
+              REACT_APP_SEND_MESSAGE_SERVICE_ID: $(reactAppSendMessageServiceId)
+              REACT_APP_SEND_MESSAGE_TEMPLATE_ID: $(reactAppSendMessageTemplateId)
+              REACT_APP_SEND_MESSAGE_PUBLIC_KEY: $(reactAppSendMessagePublicKeyId)
             inputs:
               ConnectionType: 'AzureRM'
               azureSubscription: 'AzurePortalServiceConncetion'
