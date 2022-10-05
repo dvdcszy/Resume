@@ -7,12 +7,18 @@ import { NavLink } from 'react-router-dom';
 
 const NavigationBar = () => {
   const navRef = useRef() as React.MutableRefObject<HTMLDivElement>;
+  const navBurgerRef = useRef() as React.MutableRefObject<HTMLDivElement>;
   const toggleBurger = () => {
+    navBurgerRef.current.classList.toggle('is-active');
     navRef.current.classList.toggle('is-active');
   };
   const closeNavmenu = () => {
     const hasClassIsActive = navRef.current.classList.contains('is-active');
+    const hasClassIsActiveBurger =
+      navBurgerRef.current.classList.contains('is-active');
     if (hasClassIsActive) navRef.current.classList.remove('is-active');
+    if (hasClassIsActiveBurger)
+      navBurgerRef.current.classList.remove('is-active');
   };
   return (
     <nav className='navbar' role='navigation' aria-label='main navigation'>
@@ -21,7 +27,7 @@ const NavigationBar = () => {
           <img src={initialsLogo} alt='My logo' />
         </a>
         <div
-          ref={navRef}
+          ref={navBurgerRef}
           className='navbar-burger'
           onClick={() => toggleBurger()}
         >
