@@ -36,6 +36,8 @@ stages:
 
           - task: Npm@1
             displayName: 'npm run build'
+            env:
+              REACT_APP_SEND_MESSAGE_SERVICE_ID: $(reactAppSendMessageServiceId)
             inputs:
               command: custom
               verbose: false
