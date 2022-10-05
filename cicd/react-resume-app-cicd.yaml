@@ -61,7 +61,7 @@ stages:
               buildType: 'current'
               artifactName: 'drop'
               targetPath: '$(System.DefaultWorkingDirectory)'
-          - powershell: Get-ChildItem -Path '$(System.DefaultWorkingDirectory)/s' -recurse
+          #- powershell: Get-ChildItem -Path '$(System.DefaultWorkingDirectory)/s' -recurse
 
           - task: AzureRmWebAppDeployment@4
             inputs:
